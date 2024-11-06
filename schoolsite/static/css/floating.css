@@ -1,0 +1,61 @@
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.floating-button:hover {
+    background-color: #0056b3;
+}
+
+
+#course-form {
+    max-width: 500px; /* أقصى عرض للنموذج */
+    margin: 20px auto; /* للمحاذاة الوسطى */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px; /* مسافة بين العناصر */
+}
+
+.form-group label {
+    display: block; /* لجعل التسمية في سطر منفصل */
+    margin-bottom: 5px; /* مسافة تحت التسمية */
+}
+
+.form-control {
+    width: 100%; /* لجعل الإدخال يشغل العرض الكامل */
+    padding: 10px; /* حشوة داخلية */
+    border: 1px solid #ccc; /* حد بسيط */
+    border-radius: 4px; /* زوايا دائرية */
+}
+
+.btn {
+    background-color: #007bff; /* لون الزر */
+    color: white; /* لون النص */
+    padding: 10px 15px; /* حشوة داخلية للزر */
+    border: none; /* لا حد */
+    border-radius: 4px; /* زوايا دائرية للزر */
+    cursor: pointer; /* تغيير المؤشر عند المرور فوق الزر */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* لون الزر عند التمرير */
+}

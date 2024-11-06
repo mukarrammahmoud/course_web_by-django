@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+    
+
+<div  dir="rtl" id="course-form" style="display:block;">
+    <div id="course-fo?rm" style="display:block; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+        <h3>? Are You Sure from Deleteing  </h3>
+        <form  dir="rtl" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+             
+              <br>
+              <br>
+              <button type="submit" style="background-color:  red;" class="btn btn-danger">Delete</button>
+  
+              <a href="{% url 'teacher' %}" type="button" class="btn btn-success">Cancel</a>
+        </form>
+    </div>
+
+</div>
+</div>
+{% endblock %} 

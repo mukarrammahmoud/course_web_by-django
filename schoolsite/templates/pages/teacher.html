@@ -1,0 +1,91 @@
+ {% extends 'base.html' %}
+ {% load static %}
+ {% block content %}
+ <!-- teacher section -->
+ <!-- <section class="teacher_section layout_padding-bottom">
+    <div class="container">
+      <h2 class="main-heading ">
+        Our Teachers
+      </h2>
+      <p class="text-center">
+        Ipsum available, but the majority h
+      </p>
+      <div class="teacher_container layout_padding2">
+        <div class="card-deck">
+          {% for teacher in teachers %}
+          <div class="card">
+            {% if teacher.imageInstructor %}
+            <img class="card-img-top" src="{{teacher.imageInstructor.url}}" alt="Card image cap">
+
+             {% else %}
+            <img class="card-img-top" src="{% static 'images/teacher-1.jpg' %}" alt="Card image cap">
+            {% endif %}
+            <div class="card-body">
+              <h5 class="card-title">{{teacher.name}}</h5>
+              <h5 class="card-title">{{teacher.specialty}}</h5>
+            </div>
+          </div>
+          {% endfor %}
+        
+        </div>
+      </div>
+
+
+      <div class="d-flex justify-content-center mt-3">
+        <a href="" class="call_to-btn  ">
+
+          <span>
+            See More
+          </span>
+          <img src="{% static 'images/right-arrow.png' %}" alt="">
+        </a>
+      </div>
+    </div>
+  </section> -->
+
+
+  <div class="team section" id="team">
+    <div class="container">
+      <div class="row">
+
+        {% for teacher in teachers %}
+        <div class="col-lg-3 col-md-6">
+          <div class="team-member">
+            <div class="main-content">
+              {% if teacher.imageInstructor %}
+              <img src="{{teacher.imageInstructor.url}}" alt="">
+
+               {% else %}
+              <img src="{% static 'assets/images/member-01.jpg' %}" alt="">
+              {% endif %}
+              <span class="category">{{teacher.specialty}}</span>
+              <h4>{{teacher.name}}</h4>
+              <ul class="social-icons">
+                <a href="{% url 'edit_teacher' teacher.id %}" style="background-color: rgb(95, 235, 30); border-radius: 8px; padding: 10px;margin: 10px;">Edit </a>
+              
+                <a href="{% url 'delete_teacher' teacher.id %}" style="background-color: rgb(222, 14, 14); border-radius: 8px; padding: 10px;color: aliceblue;">Delete </a>
+              </ul>
+            </div>
+         
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+    
+
+  {% endfor %}
+
+
+
+      </div>
+    </div>
+  </div> 
+
+
+  <a href="{% url 'add_teacher'  %}" class="floating-button" id="add-course-button">+</a>
+  <!-- teacher section -->
+   {% endblock %}

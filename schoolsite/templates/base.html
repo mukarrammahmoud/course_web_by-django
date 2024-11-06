@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Learn With Our Academy</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/templatemo-scholar.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+  <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/floating.css' %}" />
+  <!-- progress barstle -->
+  <link rel="stylesheet" href="{% static 'css/css-circular-prog-bar.css' %}">
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css '%}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css '%}" rel="stylesheet" />
+  
+
+
+
+
+  <link rel="stylesheet" href="{% static 'css/css-circular-prog-bar.css '%}">
+
+
+</head>
+
+<body lang="en" dir="ltr">
+  <div class="top_container">
+{% include 'parts/header.html' %}
+ 
+{% block content %}
+
+
+{% endblock %}
+
+{% include 'parts/footer.html' %}
+    <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js '%}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.js '%}"></script>
+    <script type="text/javascript" src="{% static 'js/floating.js '%}"></script>
+  <script>
+    {% for course in courses %}
+    $(".cat{{course.category.id}}").click(function(){
+      $(".coursehide").hide();
+      $(".course{{course.category.id}}").show();
+    });
+    {% endfor %}
+  </script>
+    <script>
+             document.addEventListener('DOMContentLoaded',function(){
+        var hidin={{hide}};
+        if( hidin == 0)
+      {
+        $(".floating-button").hide();
+        $(".social-icons").hide();
+        // document.getElementsByClassName('main-heading').style.display='none'
+      
+      }
+      }
+    );
+
+      $(".salaryrental").hide();
+      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+      // Australia.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {
+            lat: 40.645037,
+            lng: -73.880224
+          },
+        });
+  
+        var image = "{% static 'images/maps-and-flags.png '%}";
+        var beachMarker = new google.maps.Marker({
+          position: {
+            lat: 40.645037,
+            lng: -73.880224
+          },
+          map: map,
+          icon: image
+        });
+      }
+    </script>
+    <!-- google map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+    </script>
+    <!-- end google map js -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.min.js' %}"></script>
+    <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'assets/js/counter.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    
+  </body>
+  
+  </html>
